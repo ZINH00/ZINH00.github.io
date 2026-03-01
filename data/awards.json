@@ -5,7 +5,8 @@
     "title": "2026 중부대학교 최우수졸업생 성적우수상",
     "issuer": "중부대학교",
     "date": "2026.02.24",
-    "pdf": "awards/[수상] 중부대학교_성적우수상.pdf"
+    "pdf": "awards/[수상] 중부대학교_성적우수상.pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "award_011",
@@ -14,7 +15,7 @@
     "issuer": "한국정보보호산업협회(KISIA)",
     "date": "2025.12.19",
     "pdf": "awards/[수상] KISIA_정보보호 정책제안(우수).pdf",
-    "logo": "logo/kisia_logo.jpeg"
+    "logo": "logo/kisia_logo02.png"
   },
   {
     "id": "patent_001",
@@ -23,7 +24,7 @@
     "issuer": "10-2025-0140200",
     "date": "2025.09.25",
     "pdf": "awards/[NPDE-0127515] 딥보이스 탐지 장치 및 방법.pdf",
-    "logo": "logo/kipo_logo.png"
+    "logo": "logo/korea.png"
   },
   {
     "id": "award_010",
@@ -31,7 +32,8 @@
     "title": "2025 중부대학교 캡스톤디자인 경진대회 우수상(총장)",
     "issuer": "중부대학교",
     "date": "2025.09.10",
-    "pdf": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2025_우수).pdf"
+    "pdf": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2025_우수).pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "award_009",
@@ -39,7 +41,8 @@
     "title": "2025 중부대학교 성적향상 프로젝트 대상",
     "issuer": "중부대학교",
     "date": "2025.07.21",
-    "pdf": "awards/[수상] 중부대학교_성적향상 프로젝트(2025_대상).pdf"
+    "pdf": "awards/[수상] 중부대학교_성적향상 프로젝트(2025_대상).pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "award_008",
@@ -48,7 +51,7 @@
     "issuer": "한국융합보안학회",
     "date": "2025.07.15",
     "pdf": "awards/[수상] 2025 한국융합보안 하계학술대회(우수논문상).pdf",
-    "logo": "logo/kepc_logo.svg"
+    "logo": "logo/kepc_logo.png"
   },
   {
     "id": "cert_001",
@@ -65,7 +68,8 @@
     "title": "2024 중부대학교 성적향상 프로젝트 대상",
     "issuer": "중부대학교",
     "date": "2025.02.04",
-    "pdf": "awards/[수상] 중부대학교_성적향상 프로젝트(2024_대상).pdf"
+    "pdf": "awards/[수상] 중부대학교_성적향상 프로젝트(2024_대상).pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "award_006",
@@ -73,7 +77,8 @@
     "title": "2024 중부대학교 비마 학습동아리 최우수상",
     "issuer": "중부대학교",
     "date": "2025.01.08",
-    "pdf": "awards/[수상] 중부대학교_비마 학습동아리(최우수상).pdf"
+    "pdf": "awards/[수상] 중부대학교_비마 학습동아리(최우수상).pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "award_005",
@@ -81,7 +86,8 @@
     "title": "2024 중부대학교 캡스톤디자인 경진대회 우수상(총장)",
     "issuer": "중부대학교",
     "date": "2024.12.12",
-    "pdf": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2024_우수).pdf"
+    "pdf": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2024_우수).pdf",
+    "logo": "logo/joongbu_univ02.png"
   },
   {
     "id": "cert_002",
@@ -98,7 +104,8 @@
     "title": "침해사고대응전문가 2급",
     "issuer": "사이버보안평가기술원",
     "date": "2024.11.08",
-    "pdf": "awards/[자격증] 침해사고대응전문가 2급.pdf"
+    "pdf": "awards/[자격증] 침해사고대응전문가 2급.pdf",
+    "logo": "logo/korea.png"
   },
   {
     "id": "award_002",
@@ -107,7 +114,7 @@
     "issuer": "한국융합보안학회",
     "date": "2024.11.08",
     "pdf": "awards/[수상] 2024 한국융합보안 추계학술대회(장려상).pdf",
-    "logo": "logo/kcsa_logo.png"
+    "logo": "logo/kcsa_logo02.png"
   },
   {
     "id": "award_001",
@@ -116,7 +123,7 @@
     "issuer": "한국융합보안학회",
     "date": "2024.06.27",
     "pdf": "awards/[수상] 2024 한국융합보안 하계학술대회(우수논문상).pdf",
-    "logo": "logo/kepco_logo.svg"
+    "logo": "logo/kepco_logo.png"
   },
   {
     "id": "award_004",
@@ -125,7 +132,7 @@
     "issuer": "과학기술정보통신부",
     "date": "2024.05.17",
     "pdf": "awards/[수상] 과학기술정보통신부_국가우수장학 이공계(장관상).pdf",
-    "logo": "logo/msi_logo.png"
+    "logo": "logo/korea.png"
   },
   {
     "id": "award_003",
@@ -134,6 +141,6 @@
     "issuer": "알리익스프레스(AliExpress)",
     "date": "2025.06.30",
     "pdf": "awards/[수상] 알리익스프레스 장학증서.pdf",
-    "logo": "logo/ali_logo.svg"
+    "logo": "logo/alibaba_logo.png"
   }
 ]
