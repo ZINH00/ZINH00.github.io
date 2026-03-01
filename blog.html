@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Jung Jinho</title>
+  <meta name="description" content="Jung Jinho의 블로그입니다.">
+  <link rel="icon" href="logo/jjh_logo_02.png">
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="logo/jjh_logo_02.png" alt="Logo" class="logo-img">
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="index.html"    class="nav-link">Home</a>
+          <a href="about.html"   class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="papers.html"  class="nav-link">Papers</a>
+          <a href="awards.html"  class="nav-link">Awards</a>
+          <a href="blog.html"    class="nav-link">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="테마 전환"></button>
+          <button id="mobile-menu-btn" class="nav-menu-btn" aria-label="Open menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="index.html"    class="nav-link">Home</a>
+    <a href="about.html"   class="nav-link">About</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="papers.html"  class="nav-link">Papers</a>
+    <a href="awards.html"  class="nav-link">Awards</a>
+    <a href="blog.html"    class="nav-link">Blog</a>
+  </div>
+
+  <!-- ── Page Content ── -->
+  <main class="page-content">
+    <div class="container">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Blog</h1>
+          <p class="page-subtitle">기술 블로그 포스트</p>
+        </div>
+        <div class="search-wrap">
+          <svg class="search-icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input class="search-input" id="search-input" type="search"
+            placeholder="검색 (제목, 요약, 태그)">
+        </div>
+      </div>
+      <p class="search-count" id="search-count"></p>
+
+      <!-- Gallery -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered by data.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">© 2026 Jung Jinho. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    const PAGE = 'blog';
+    let allItems = [];
+
+    function updateCount(filtered, query) {
+      const el = document.getElementById('search-count');
+      if (!el) return;
+      el.textContent = query
+        ? `"${query}" 검색 결과: ${filtered.length}개`
+        : (filtered.length ? `총 ${filtered.length}개` : '');
+    }
+
+    function refresh(query = '') {
+      const filtered = filterItems(allItems, query, PAGE);
+      renderGallery('gallery-grid', filtered, PAGE, query ? `"${query}"에 대한 결과가 없습니다` : '아직 블로그 포스트가 없습니다');
+      updateCount(filtered, query);
+    }
+
+    (async () => {
+      allItems = await loadAllData(PAGE);
+      refresh();
+    })();
+
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      refresh(e.target.value);
+    });
+  </script>
+</body>
+</html>

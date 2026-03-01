@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jung Jinho — Portfolio</title>
+  <meta name="description" content="Jung Jinho의 포트폴리오 웹사이트입니다.">
+  <link rel="icon" href="logo/jjh_logo_02.png">
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="logo/jjh_logo_02.png" alt="Logo" class="logo-img">
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="index.html"    class="nav-link">Home</a>
+          <a href="about.html"   class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="papers.html"  class="nav-link">Papers</a>
+          <a href="awards.html"  class="nav-link">Awards</a>
+          <a href="blog.html"    class="nav-link">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="테마 전환"></button>
+          <button id="mobile-menu-btn" class="nav-menu-btn" aria-label="Open menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"    class="nav-link">Home</a>
+    <a href="about.html"   class="nav-link">About</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="papers.html"  class="nav-link">Papers</a>
+    <a href="awards.html"  class="nav-link">Awards</a>
+    <a href="blog.html"    class="nav-link">Blog</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Jung Jinho</h1>
+        <p class="hero-desc">
+          <!-- 자기소개 문구를 여기에 입력하세요. -->
+        </p>
+        <div class="hero-links">
+          <a href="about.html" class="btn btn-primary">About Me</a>
+          <a href="projects.html" class="btn btn-outline">Projects</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="profile/jinho.png" alt="Jung Jinho" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">© 2026 Jung Jinho. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
