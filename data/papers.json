@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": "paper_005",
+    "title": "정적⋅동적 분석을 통한 양자취약암호(Non-PQC) 탐지도구 개발에 관한 연구",
+    "authors": "Jinho Jung, Jungmin Seo, Chanhee Shin, Junsu Ha, Moonjae Hyun, Kisoon Yoon",
+    "venue": "한국정보보호학회",
+    "date": "2025.11.10",
+    "pdf": "papers/2025_한국정보보호학회_동계학술대회01.pdf",
+    "logo": "logo/kiisc_logo.png",
+    "categories": ["domestic", "conference"]
+  },
+  {
+    "id": "paper_006",
+    "title": "양자내성암호 전환을 위한 멀티-에이전트 LLM 프레임워크에 관한 연구",
+    "authors": "Junsu Ha, Jinho Jung, Jungmin Seo, Chanhee Shin, Moonjae Hyun, Kisoon Yoon",
+    "venue": "한국정보보호학회",
+    "date": "2025.11.10",
+    "pdf": "papers/2025_한국정보보호학회_동계학술대회02.pdf",
+    "logo": "logo/kiisc_logo.png",
+    "categories": ["domestic", "conference"]
+  },
+  {
+    "id": "paper_004",
+    "title": "딥보이스로 제작된 음성 탐지 시스템 연구",
+    "authors": "Jin-Ho Jung, Woo-Kyung Park, Ha-Young Lee, Su-Min Choi, Jun-Hee Hong, Min-Su Kim",
+    "venue": "한국융합보안학회",
+    "date": "2025.06.27",
+    "pdf": "papers/2025_한국융합보안학회_하계학술대회.pdf",
+    "logo": "logo/kcsa_logo.png",
+    "categories": ["domestic", "conference"]
+  },
+  {
+    "id": "paper_003",
+    "title": "머신러닝을 활용한 피싱 탐지⋅차단 시스템 연구: PDCA 방법론을 기반으로",
+    "authors": "Jin-Ho Jung, Woo-Kyung Park, Ha-Young Lee, Su-Min Choi, Jun-Hee Hong, Min-Su Kim",
+    "venue": "한국융합보안학회",
+    "date": "2024.11.08",
+    "pdf": "papers/2024_한국융합보안학회_추계학술대회.pdf",
+    "logo": "logo/kcsa_logo.png",
+    "categories": ["domestic", "conference"]
+  },
+  {
+    "id": "paper_002",
+    "title": "머신러닝을 이용한 불법⋅유해 사이트 차단 시스템 연구",
+    "authors": "Jin-Ho Jung, Woo-Kyung Park, Su-Min Choi, Jun-Hee Hong, Pyeong-An Kim, Min-Su Kim",
+    "venue": "한국융합보안학회",
+    "date": "2024.06.08",
+    "pdf": "papers/2024_한국융합보안학회_하계학술대회.pdf",
+    "logo": "logo/kcsa_logo.png",
+    "categories": ["domestic", "conference"]
+  },
+  {
+    "id": "paper_001",
+    "title": "Randomized ZKP Cryptography with Zero-Knowledge",
+    "authors": "Woo-Kyung Park, Tae-Yeon Lee, Jin-Ho Jung, Su-Min Choi, Min-Su Kim",
+    "venue": "International Conference Energy, Convergence, Security (ICECS)",
+    "date": "2024.01.21",
+    "pdf": "papers/2024_ICECS.pdf",
+    "logo": "logo/kcsa_logo.png",
+    "categories": ["international", "conference"]
+  }
+]

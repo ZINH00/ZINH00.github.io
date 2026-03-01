@@ -250,43 +250,37 @@ function renderList(containerId, items, page, emptyMessage) {
   attachDeleteHandlers(containerId, page);
 }
 
-function buildPaperItem(item, idx, page) {
-  const deleteBtn = item.isLocal
-    ? `<button class="card-action-btn delete" data-id="${item.id}" data-page="${page}" title="삭제">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="3 6 5 6 21 6"/>
-          <path d="M19 6l-1 14H6L5 6"/>
-          <path d="M10 11v6M14 11v6"/>
-          <path d="M9 6V4h6v2"/>
-        </svg>
-      </button>`
-    : '';
+function buildPaperItem(item, num, page) {
+  const catLabels = { domestic: '국내', international: '해외', conference: '학술대회', journal: '저널' };
+  const catClasses = { domestic: 'cat-domestic', international: 'cat-international', conference: 'cat-conference', journal: 'cat-journal' };
 
-  const doiHtml = item.doi || item.link
-    ? `<a href="${escapeHtml(item.doi || item.link)}" target="_blank" rel="noopener noreferrer"
-        style="font-size:0.8rem;color:var(--color-accent);font-weight:600;">DOI / Link ↗</a>`
-    : '';
+  const badges = (item.categories || [])
+    .map(c => `<span class="type-badge ${catClasses[c] || ''}">${catLabels[c] || escapeHtml(c)}</span>`)
+    .join('');
 
-  const localBadge = item.isLocal ? `<span class="local-badge">Local</span>` : '';
+  const titleHtml = item.pdf
+    ? `<a href="${escapeHtml(item.pdf)}" target="_blank" rel="noopener noreferrer"
+        class="list-item-title-link">${escapeHtml(item.title)}</a>`
+    : escapeHtml(item.title);
+
+  const logoHtml = item.logo
+    ? `<img src="${escapeHtml(item.logo)}" alt="로고" class="award-item-logo">`
+    : '';
 
   return `
-    <div class="list-item">
-      <span class="list-item-index">[${idx + 1}]</span>
+    <div class="list-item award-list-item">
       <div class="list-item-content">
         <div class="list-item-header">
-          <h3 class="list-item-title">${escapeHtml(item.title)}</h3>
-          <div class="list-item-actions">${deleteBtn}</div>
+          <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
+            ${badges ? `<div style="display:flex;gap:5px;flex-wrap:wrap">${badges}</div>` : ''}
+            <h3 class="list-item-title">${titleHtml}</h3>
+          </div>
+          ${logoHtml}
         </div>
+        <p class="list-item-meta" style="margin-top:4px">${escapeHtml(item.authors || '')}</p>
         <p class="list-item-meta">
-          ${escapeHtml(item.authors || '')}
-          ${item.venue ? `· <em>${escapeHtml(item.venue)}</em>` : ''}
-          ${item.year ? `· ${escapeHtml(String(item.year))}` : ''}
+          ${escapeHtml(item.venue || '')}${item.date ? ` · ${formatAwardDate(item.date)}` : ''}
         </p>
-        ${item.abstract ? `<p class="list-item-desc">${escapeHtml(item.abstract)}</p>` : ''}
-        <div style="display:flex;align-items:center;gap:10px;margin-top:4px">
-          ${doiHtml}${localBadge}
-        </div>
       </div>
     </div>`;
 }

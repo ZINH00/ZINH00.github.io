@@ -726,6 +726,28 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="dark"] .type-certificate { color: #BFDBFE; background-color: rgba(191, 219, 254, 0.12); }
 [data-theme="dark"] .type-patent { color: #E0F2FE; background-color: rgba(224, 242, 254, 0.1); }
 
+/* Papers — Category Badges */
+.cat-domestic {
+  background-color: rgba(30, 64, 175, 0.1);
+  color: #1E40AF;
+}
+.cat-international {
+  background-color: rgba(5, 150, 105, 0.1);
+  color: #047857;
+}
+.cat-conference {
+  background-color: rgba(100, 116, 139, 0.1);
+  color: #475569;
+}
+.cat-journal {
+  background-color: rgba(124, 58, 237, 0.1);
+  color: #6D28D9;
+}
+[data-theme="dark"] .cat-domestic { color: #93C5FD; background-color: rgba(147, 197, 253, 0.15); }
+[data-theme="dark"] .cat-international { color: #6EE7B7; background-color: rgba(110, 231, 183, 0.15); }
+[data-theme="dark"] .cat-conference { color: #CBD5E1; background-color: rgba(203, 213, 225, 0.12); }
+[data-theme="dark"] .cat-journal { color: #C4B5FD; background-color: rgba(196, 181, 253, 0.15); }
+
 /* ===========================
    Empty State
    =========================== */

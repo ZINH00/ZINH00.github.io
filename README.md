@@ -1,1 +1,4 @@
-# ZINH00.github.io
+### 커밋 메시지
+```bash
+./deploy.sh "[feat] 예시"
+```
