@@ -6,7 +6,7 @@
   <title>About — Jung Jinho</title>
   <meta name="description" content="Jung Jinho 자기소개 페이지입니다.">
   <link rel="icon" href="logo/jjh_logo_02.png">
-  <link rel="stylesheet" href="css/style.css?v=1772384861">
+  <link rel="stylesheet" href="css/style.css?v=1772385757">
 </head>
 <body>
 
@@ -149,13 +149,15 @@
           </section>
 
           <section>
-            <h2 class="section-heading">Skills</h2>
-            <!-- 기술 스택을 여기에 입력하세요. -->
+            <h2 class="section-heading">Papers</h2>
+            <div class="activity-list" id="about-papers-list">
+              <p class="activity-role">불러오는 중...</p>
+            </div>
           </section>
 
           <section>
-            <h2 class="section-heading">Experience</h2>
-            <!-- 경력 사항을 여기에 입력하세요. -->
+            <h2 class="section-heading">Skills</h2>
+            <!-- 기술 스택을 여기에 입력하세요. -->
           </section>
 
         </div>
@@ -204,6 +206,40 @@
             ${item.description ? `<p class="activity-role">${escapeHtml(item.description)}</p>` : ''}
           </div>
         </div>`).join('');
+    })();
+
+    // Papers: 최신순 상위 5개
+    (async () => {
+      const all = await loadAllData('papers');
+      const papers = all
+        .sort((a, b) => parseAwardDate(b.date) - parseAwardDate(a.date))
+        .slice(0, 5);
+
+      const container = document.getElementById('about-papers-list');
+      if (!container) return;
+
+      if (!papers.length) {
+        container.innerHTML = '<p class="activity-role">등록된 논문이 없습니다.</p>';
+        return;
+      }
+
+      const catLabels = { domestic: '국내', international: '해외', conference: '학술대회', journal: '저널' };
+      const catClasses = { domestic: 'cat-domestic', international: 'cat-international', conference: 'cat-conference', journal: 'cat-journal' };
+
+      container.innerHTML = papers.map(item => {
+        const badges = (item.categories || [])
+          .map(c => `<span class="type-badge ${catClasses[c] || ''}">${catLabels[c] || escapeHtml(c)}</span>`)
+          .join('');
+        const titleHtml = item.pdf
+          ? `<a href="${escapeHtml(item.pdf)}" target="_blank" rel="noopener noreferrer" class="list-item-title-link">${escapeHtml(item.title)}</a>`
+          : escapeHtml(item.title);
+        return `
+          <div class="activity-item" style="flex-direction:column;align-items:flex-start;gap:6px">
+            <div style="display:flex;gap:5px;flex-wrap:wrap">${badges}</div>
+            <p class="activity-org" style="font-size:0.95rem">${titleHtml}</p>
+            <p class="activity-role">${escapeHtml(item.venue || '')}${item.date ? ` · ${formatAwardDate(item.date)}` : ''}</p>
+          </div>`;
+      }).join('');
     })();
   </script>
 </body>
