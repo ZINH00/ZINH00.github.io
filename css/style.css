@@ -732,8 +732,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #1E40AF;
 }
 .cat-international {
-  background-color: rgba(5, 150, 105, 0.1);
-  color: #047857;
+  background-color: rgba(28, 41, 63, 0.12);
+  color: #1C293F;
 }
 .cat-conference {
   background-color: rgba(100, 116, 139, 0.1);
@@ -744,7 +744,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #6D28D9;
 }
 [data-theme="dark"] .cat-domestic { color: #93C5FD; background-color: rgba(147, 197, 253, 0.15); }
-[data-theme="dark"] .cat-international { color: #6EE7B7; background-color: rgba(110, 231, 183, 0.15); }
+[data-theme="dark"] .cat-international { color: #BFDBFE; background-color: rgba(191, 219, 254, 0.12); }
 [data-theme="dark"] .cat-conference { color: #CBD5E1; background-color: rgba(203, 213, 225, 0.12); }
 [data-theme="dark"] .cat-journal { color: #C4B5FD; background-color: rgba(196, 181, 253, 0.15); }
 
