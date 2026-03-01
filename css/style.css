@@ -708,23 +708,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .type-award {
-  background-color: rgba(245, 158, 11, 0.12);
-  color: #B45309;
+  background-color: rgba(30, 64, 175, 0.1);
+  color: #1E40AF;
 }
 
 .type-certificate {
-  background-color: rgba(16, 185, 129, 0.12);
-  color: #047857;
+  background-color: rgba(28, 41, 63, 0.12);
+  color: #1C293F;
 }
 
 .type-patent {
-  background-color: rgba(139, 92, 246, 0.12);
-  color: #6D28D9;
+  background-color: rgba(10, 18, 38, 0.15);
+  color: #0A1226;
 }
 
-[data-theme="dark"] .type-award { color: #FCD34D; background-color: rgba(245, 158, 11, 0.2); }
-[data-theme="dark"] .type-certificate { color: #6EE7B7; background-color: rgba(16, 185, 129, 0.2); }
-[data-theme="dark"] .type-patent { color: #C4B5FD; background-color: rgba(139, 92, 246, 0.2); }
+[data-theme="dark"] .type-award { color: #93C5FD; background-color: rgba(147, 197, 253, 0.15); }
+[data-theme="dark"] .type-certificate { color: #BFDBFE; background-color: rgba(191, 219, 254, 0.12); }
+[data-theme="dark"] .type-patent { color: #E0F2FE; background-color: rgba(224, 242, 254, 0.1); }
 
 /* ===========================
    Empty State
@@ -1535,7 +1535,29 @@ footer {
 }
 
 .award-list-item {
-  padding-top: 18px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 0;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+.award-list-item:first-child {
+  padding-top: 0;
+}
+
+.award-list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.award-list-item:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+  border-bottom-color: var(--color-accent);
 }
 
 .award-item-logo {
