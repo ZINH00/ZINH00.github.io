@@ -6,7 +6,7 @@
   <title>About — Jung Jinho</title>
   <meta name="description" content="Jung Jinho 자기소개 페이지입니다.">
   <link rel="icon" href="logo/jjh_logo_02.png">
-  <link rel="stylesheet" href="css/style.css?v=1772385757">
+  <link rel="stylesheet" href="css/style.css?v=1772385925">
 </head>
 <body>
 
@@ -233,11 +233,17 @@
         const titleHtml = item.pdf
           ? `<a href="${escapeHtml(item.pdf)}" target="_blank" rel="noopener noreferrer" class="list-item-title-link">${escapeHtml(item.title)}</a>`
           : escapeHtml(item.title);
+        const logoHtml = item.logo
+          ? `<img src="${escapeHtml(item.logo)}" alt="로고" class="activity-logo">`
+          : '';
         return `
-          <div class="activity-item" style="flex-direction:column;align-items:flex-start;gap:6px">
-            <div style="display:flex;gap:5px;flex-wrap:wrap">${badges}</div>
-            <p class="activity-org" style="font-size:0.95rem">${titleHtml}</p>
-            <p class="activity-role">${escapeHtml(item.venue || '')}${item.date ? ` · ${formatAwardDate(item.date)}` : ''}</p>
+          <div class="activity-item" style="align-items:center">
+            <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
+              <div style="display:flex;gap:5px;flex-wrap:wrap">${badges}</div>
+              <p class="activity-org" style="font-size:0.95rem">${titleHtml}</p>
+              <p class="activity-role">${escapeHtml(item.venue || '')}${item.date ? ` · ${formatAwardDate(item.date)}` : ''}</p>
+            </div>
+            ${logoHtml}
           </div>`;
       }).join('');
     })();
