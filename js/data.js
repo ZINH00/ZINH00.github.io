@@ -271,7 +271,7 @@ function buildPaperItem(item, num, page) {
     <div class="list-item award-list-item">
       <div class="list-item-content">
         <div class="list-item-header">
-          <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
+          <div style="display:flex;flex-direction:column;gap:8.5px;flex:1;min-width:0">
             ${badges ? `<div style="display:flex;gap:5px;flex-wrap:wrap">${badges}</div>` : ''}
             <h3 class="list-item-title">${titleHtml}</h3>
           </div>
