@@ -6,17 +6,218 @@
   <title>Jung Jinho — Portfolio</title>
   <meta name="description" content="Jung Jinho의 포트폴리오 웹사이트입니다.">
   <link rel="icon" href="logo/jjh_logo_02.png">
-  <link rel="stylesheet" href="css/style.css?v=1772506925">
+  <link rel="stylesheet" href="css/style.css?v=1772532305">
+  <style>
+    /* ─────────────────────────────
+       Homepage — Terminal Hero (Theme-aware)
+    ───────────────────────────── */
+
+    /* ── Light mode (default) ── */
+    body.page-home {
+      background-color: var(--color-bg);
+    }
+    body.page-home .navbar {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-bottom-color: var(--color-border);
+      backdrop-filter: blur(14px);
+    }
+    body.page-home .nav-link {
+      color: var(--color-text-secondary);
+    }
+    body.page-home .nav-link:hover,
+    body.page-home .nav-link.active {
+      color: var(--color-text);
+    }
+    body.page-home .theme-toggle,
+    body.page-home .nav-menu-btn {
+      color: var(--color-text-secondary);
+    }
+    body.page-home .mobile-nav {
+      background-color: var(--color-bg);
+      border-top: 1px solid var(--color-border);
+    }
+    body.page-home footer {
+      background-color: var(--color-bg);
+      border-top: 1px solid var(--color-border);
+    }
+    body.page-home .footer-text {
+      color: var(--color-text-muted);
+    }
+
+    /* ── Dark mode overrides ── */
+    [data-theme="dark"] body.page-home {
+      background-color: #060E1A;
+    }
+    [data-theme="dark"] body.page-home .navbar {
+      background-color: rgba(6, 14, 26, 0.82);
+      border-bottom-color: #1E3A5F;
+    }
+    [data-theme="dark"] body.page-home .nav-link {
+      color: #64748B;
+    }
+    [data-theme="dark"] body.page-home .nav-link:hover,
+    [data-theme="dark"] body.page-home .nav-link.active {
+      color: #E2E8F0;
+    }
+    [data-theme="dark"] body.page-home .theme-toggle,
+    [data-theme="dark"] body.page-home .nav-menu-btn {
+      color: #64748B;
+    }
+    [data-theme="dark"] body.page-home .mobile-nav {
+      background-color: #0A1628;
+      border-top: 1px solid #1E3A5F;
+    }
+    [data-theme="dark"] body.page-home footer {
+      background-color: #060E1A;
+      border-top: 1px solid #0F2040;
+    }
+    [data-theme="dark"] body.page-home .footer-text {
+      color: #1E3A5F;
+    }
+
+    /* ── Terminal Hero Layout ── */
+    .term-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--navbar-height) + 40px) 32px 80px;
+    }
+    .term-content {
+      width: 100%;
+      max-width: 900px;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    /* ── Prompt lines ── */
+    .term-prompt {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+      letter-spacing: 0.01em;
+    }
+    .t-user { color: #16A34A; }
+    .t-sep  { color: #64748B; }
+    .t-path { color: #2563EB; }
+    .t-sym  { color: #64748B; padding: 0 6px; }
+    .t-cmd  { color: #374151; }
+
+    [data-theme="dark"] .t-user { color: #4ADE80; }
+    [data-theme="dark"] .t-sep  { color: #4A6FA5; }
+    [data-theme="dark"] .t-path { color: #60A5FA; }
+    [data-theme="dark"] .t-sym  { color: #4A6FA5; }
+    [data-theme="dark"] .t-cmd  { color: #CBD5E1; }
+
+    /* ── Scramble title ── */
+    .term-title-block {
+      margin-bottom: 36px;
+      line-height: 1.05;
+    }
+    .term-title-line {
+      display: block;
+      font-size: clamp(3.2rem, 8.5vw, 7.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      min-height: 1.1em;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    /* Scramble char states */
+    .sc-pending  { color: transparent; }
+    .sc-spinning { color: #2563EB; }
+    .sc-done     { color: #1C293F; }
+
+    [data-theme="dark"] .sc-done { color: #F1F5F9; }
+
+    /* ── Tagline ── */
+    .term-tagline {
+      font-size: 0.95rem;
+      color: #64748B;
+      margin-bottom: 44px;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .term-tagline .t-arrow { color: #16A34A; }
+
+    [data-theme="dark"] .term-tagline { color: #475569; }
+    [data-theme="dark"] .term-tagline .t-arrow { color: #4ADE80; }
+
+    /* ── ls nav block ── */
+    .term-nav-block { margin-bottom: 44px; }
+    .term-nav-prompt {
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+    }
+    .term-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .term-nav-link {
+      display: inline-block;
+      padding: 7px 18px;
+      border: 1px solid #CBD5E1;
+      border-radius: 4px;
+      color: #2563EB;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+    }
+    .term-nav-link:hover {
+      border-color: #2563EB;
+      color: #1C293F;
+      background-color: rgba(37, 99, 235, 0.06);
+    }
+
+    [data-theme="dark"] .term-nav-link {
+      border-color: #1E3A5F;
+      color: #60A5FA;
+    }
+    [data-theme="dark"] .term-nav-link:hover {
+      border-color: #3B82F6;
+      color: #E2E8F0;
+      background-color: rgba(59, 130, 246, 0.08);
+    }
+
+    /* ── Blinking cursor ── */
+    .term-cursor-line {
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+    }
+    .term-cursor {
+      color: #16A34A;
+      animation: cur-blink 1s step-end infinite;
+      margin-left: 2px;
+    }
+
+    [data-theme="dark"] .term-cursor { color: #4ADE80; }
+
+    @keyframes cur-blink { 50% { opacity: 0; } }
+
+    /* ── Fade-in helper ── */
+    .t-hidden { opacity: 0; }
+    .t-fade   { transition: opacity 0.5s ease; }
+
+    @media (max-width: 640px) {
+      .term-hero { padding-left: 20px; padding-right: 20px; }
+      .term-title-line { font-size: clamp(2.4rem, 13vw, 3.5rem); }
+    }
+  </style>
 </head>
-<body>
+<body class="page-home">
 
   <!-- ── Navigation ── -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo" aria-label="Home">
-        <img src="logo/jjh_logo_02.png" alt="Logo" class="logo-img">
+        <img src="logo/jjh_logo_03.png" alt="Logo" class="logo-img">
       </a>
-
       <div class="nav-right">
         <div class="nav-links">
           <a href="index.html"    class="nav-link">Home</a>
@@ -40,9 +241,7 @@
       </div>
     </div>
   </nav>
-
-  <!-- Mobile Nav -->
-  <div id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <div id="mobile-nav" class="mobile-nav">
     <a href="index.html"    class="nav-link">Home</a>
     <a href="about.html"   class="nav-link">About</a>
     <a href="projects.html" class="nav-link">Projects</a>
@@ -51,26 +250,62 @@
     <a href="blog.html"    class="nav-link">Blog</a>
   </div>
 
-  <!-- ── Hero ── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-name">Jung Jinho</h1>
-        <p class="hero-desc">
-          <!-- 자기소개 문구를 여기에 입력하세요. -->
-        </p>
-        <div class="hero-links">
-          <a href="about.html" class="btn btn-primary">About Me</a>
-          <a href="projects.html" class="btn btn-outline">Projects</a>
+  <!-- ── Terminal Hero ── -->
+  <main class="term-hero">
+    <div class="term-content">
+
+      <!-- $ whoami -->
+      <div class="term-prompt">
+        <span class="t-user">jinho@portfolio</span>
+        <span class="t-sep">:</span>
+        <span class="t-path">~</span>
+        <span class="t-sym">$</span>
+        <span class="t-cmd">whoami</span>
+      </div>
+
+      <!-- Scramble title -->
+      <div class="term-title-block">
+        <span class="term-title-line" id="scramble-1"></span>
+        <span class="term-title-line" id="scramble-2"></span>
+      </div>
+
+      <!-- Tagline -->
+      <p class="term-tagline t-hidden t-fade" id="el-tagline">
+        <span class="t-arrow">▸</span>
+        Security Researcher &amp; Developer
+      </p>
+
+      <!-- $ ls ./pages/ -->
+      <div class="term-nav-block t-hidden t-fade" id="el-nav">
+        <div class="term-prompt term-nav-prompt">
+          <span class="t-user">jinho@portfolio</span>
+          <span class="t-sep">:</span>
+          <span class="t-path">~</span>
+          <span class="t-sym">$</span>
+          <span class="t-cmd">ls ./pages/</span>
+        </div>
+        <div class="term-nav-links">
+          <a href="about.html"    class="term-nav-link">about.html</a>
+          <a href="projects.html" class="term-nav-link">projects.html</a>
+          <a href="papers.html"   class="term-nav-link">papers.html</a>
+          <a href="awards.html"   class="term-nav-link">awards.html</a>
+          <a href="blog.html"     class="term-nav-link">blog.html</a>
         </div>
       </div>
 
-      <div class="hero-photo">
-        <img src="profile/jinho.png" alt="Jung Jinho" onerror="this.style.display='none'">
+      <!-- blinking cursor -->
+      <div class="term-cursor-line t-hidden t-fade" id="el-cursor">
+        <div class="term-prompt" style="margin-bottom:0">
+          <span class="t-user">jinho@portfolio</span>
+          <span class="t-sep">:</span>
+          <span class="t-path">~</span>
+          <span class="t-sym">$</span>
+        </div>
+        <span class="term-cursor">█</span>
       </div>
+
     </div>
-  </section>
+  </main>
 
   <!-- ── Footer ── -->
   <footer>
@@ -80,5 +315,58 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // ── Scramble Effect ──
+    const CHARS = '!@#$%^&*<>{}[]|\\/~`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const SPIN_COUNT  = 8;   // 캐릭터당 랜덤 프레임 수
+    const FRAME_MS    = 32;  // 프레임 간격(ms)
+    const CHAR_DELAY  = 42;  // 다음 글자 시작 전 딜레이(ms)
+    const LINE_DELAY  = 220; // 두 번째 줄 시작 전 딜레이(ms)
+    const START_DELAY = 480; // 처음 시작 전 딜레이(ms)
+
+    const randChar = () => CHARS[Math.floor(Math.random() * CHARS.length)];
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    async function scrambleLine(el, text) {
+      el.innerHTML = '';
+      for (const ch of text) {
+        if (ch === ' ') {
+          el.innerHTML += '<span class="sc-done"> </span>';
+          continue;
+        }
+        const span = document.createElement('span');
+        span.className = 'sc-spinning';
+        span.textContent = randChar();
+        el.appendChild(span);
+
+        for (let f = 0; f < SPIN_COUNT; f++) {
+          span.textContent = randChar();
+          await sleep(FRAME_MS);
+        }
+        span.textContent = ch;
+        span.className = 'sc-done';
+        await sleep(CHAR_DELAY);
+      }
+    }
+
+    async function fadeIn(el) {
+      el.style.opacity = '0';
+      el.classList.remove('t-hidden');
+      await sleep(20);
+      el.style.opacity = '1';
+      await sleep(520);
+    }
+
+    (async () => {
+      await sleep(START_DELAY);
+      await scrambleLine(document.getElementById('scramble-1'), "JINHO's");
+      await sleep(LINE_DELAY);
+      await scrambleLine(document.getElementById('scramble-2'), 'Portfolio');
+      await sleep(260);
+      await fadeIn(document.getElementById('el-tagline'));
+      await fadeIn(document.getElementById('el-nav'));
+      await fadeIn(document.getElementById('el-cursor'));
+    })();
+  </script>
 </body>
 </html>
