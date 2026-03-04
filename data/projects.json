@@ -130,7 +130,7 @@
     "date": "2024.07.22",
     "dateEnd": "2024.12.24",
     "summary": "캡스톤디자인 우수상(총장) 수상",
-    "image": "projects/Qshing 탐지 어플 제작.png",
+    "image": "projects/Qshing 탐지 어플리케이션 제작.png",
     "attachments": [
       { "name": "발표 자료", "path": "projects/머신러닝을 활용한 QR Code 피싱 탐지 어플 제작/QR Code 속 숨겨진 피싱피싱 사이트 탐지 어플리케이션, 안심 QR.pdf" },
       { "name": "논문", "path": "papers/2024_한국융합보안학회_추계학술대회.pdf" },
