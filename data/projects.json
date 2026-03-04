@@ -8,17 +8,44 @@
     "summary": "1차 심사 합격",
     "image": "projects/2023 정보보호 정책제안 공모전.png",
     "attachments": [
-      { "name": "1차 심사 서류", "path": "projects/2023 정보보호 정책제안 공모전/1차/정책제안서(밝은조명).pdf" },
-      { "name": "2차 심사 서류", "path": "projects/2023 정보보호 정책제안 공모전/2차/나날이 발전하는 생성형 AI, 좋기만 한 걸까.pdf" }
+      {
+        "name": "1차 심사 서류",
+        "path": "projects/2023 정보보호 정책제안 공모전/1차/정책제안서(밝은조명).pdf"
+      },
+      {
+        "name": "2차 심사 서류",
+        "path": "projects/2023 정보보호 정책제안 공모전/2차/나날이 발전하는 생성형 AI, 좋기만 한 걸까.pdf"
+      }
     ],
     "timeline": [
-      { "period": "2023.09.01 ~ 2023.10.13", "label": "공모전 접수" },
-      { "period": "2023.09.15 ~ 2023.09.25", "label": "주제 선정" },
-      { "period": "2023.09.15 ~ 2023.10.10", "label": "현황 및 문제점" },
-      { "period": "2023.09.15 ~ 2023.10.12", "label": "개선 방안" },
-      { "period": "2023.10.13", "label": "1차 제출 마감" },
-      { "period": "2023.10.27", "label": "1차 결과" },
-      { "period": "2023.11.23", "label": "2차 결과" }
+      {
+        "period": "2023.09.01 ~ 2023.10.13",
+        "label": "공모전 접수"
+      },
+      {
+        "period": "2023.09.15 ~ 2023.09.25",
+        "label": "주제 선정"
+      },
+      {
+        "period": "2023.09.15 ~ 2023.10.10",
+        "label": "현황 및 문제점"
+      },
+      {
+        "period": "2023.09.15 ~ 2023.10.12",
+        "label": "개선 방안"
+      },
+      {
+        "period": "2023.10.13",
+        "label": "1차 제출 마감"
+      },
+      {
+        "period": "2023.10.27",
+        "label": "1차 결과"
+      },
+      {
+        "period": "2023.11.23",
+        "label": "2차 결과"
+      }
     ],
     "links": [
       {
@@ -36,7 +63,10 @@
     "summary": "1차 심사 합격",
     "image": "projects/2023 조선 해운 빅데이터 활용 아이디어 공모전.png",
     "attachments": [
-      { "name": "1차 심사 서류", "path": "projects/2023 조선 해운 빅데이터 활용 아이디어 공모전/아이디어(밝은조명).pdf" }
+      {
+        "name": "1차 심사 서류",
+        "path": "projects/2023 조선 해운 빅데이터 활용 아이디어 공모전/아이디어(밝은조명).pdf"
+      }
     ],
     "links": [
       {
@@ -54,7 +84,10 @@
     "summary": "불합격",
     "image": "projects/2023 Al+Security 아이디어 공모전.png",
     "attachments": [
-      { "name": "1차 심사 서류", "path": "projects/2023 Al+Security 아이디어 공모전/서비스_기획서(밝은조명).pdf" }
+      {
+        "name": "1차 심사 서류",
+        "path": "projects/2023 Al+Security 아이디어 공모전/서비스_기획서(밝은조명).pdf"
+      }
     ],
     "links": [
       {
@@ -72,7 +105,10 @@
     "summary": "한국융합보안학회 학회지 투고",
     "image": "projects/영지식 이용한 랜덤 ZKP 암호 기법.png",
     "attachments": [
-      { "name": "논문", "path": "projects/Randomized ZKP Cryptography with Zero-Knowledge/Randomized ZKP Cryptography with Zero-Knowledge.pdf" }
+      {
+        "name": "논문",
+        "path": "projects/Randomized ZKP Cryptography with Zero-Knowledge/Randomized ZKP Cryptography with Zero-Knowledge.pdf"
+      }
     ],
     "links": [
       {
@@ -90,9 +126,18 @@
     "summary": "Chrome 확장자 플러그인 배포",
     "image": "projects/XGBoost를 이용한 불법・유해 사이트 차단 프로그램 제작.png",
     "attachments": [
-      { "name": "발표 자료", "path": "projects/XGBoost를 이용한 불법・유해 사이트 차단 프로그램 제작/인터넷 위의 작은 영웅, 당신의 안전한 길잡이 HitAnt.pdf" },
-      { "name": "논문", "path": "papers/2024_한국융합보안학회_하계학술대회.pdf" },
-      { "name": "수상", "path": "awards/[수상] 2024 한국융합보안 하계학술대회(우수논문상).pdf" }
+      {
+        "name": "발표 자료",
+        "path": "projects/XGBoost를 이용한 불법・유해 사이트 차단 프로그램 제작/인터넷 위의 작은 영웅, 당신의 안전한 길잡이 HitAnt.pdf"
+      },
+      {
+        "name": "논문",
+        "path": "papers/2024_한국융합보안학회_하계학술대회.pdf"
+      },
+      {
+        "name": "수상",
+        "path": "awards/[수상] 2024 한국융합보안 하계학술대회(우수논문상).pdf"
+      }
     ],
     "links": [
       {
@@ -114,7 +159,10 @@
     "summary": "웹 취약점 공부",
     "image": "projects/2024 제2회 전라남도 웹 취약점 경진대회.png",
     "attachments": [
-      { "name": "1차 심사 서류", "path": "projects/2024 제2회 전라남도 웹 취약점 경진대회/취약점_신고서(비상구).hwp" }
+      {
+        "name": "1차 심사 서류",
+        "path": "projects/2024 제2회 전라남도 웹 취약점 경진대회/취약점_신고서(비상구).hwp"
+      }
     ],
     "links": [
       {
@@ -130,12 +178,24 @@
     "date": "2024.07.22",
     "dateEnd": "2024.12.24",
     "summary": "캡스톤디자인 우수상(총장) 수상",
-    "image": "projects/Qshing 탐지 어플리케이션 제작.png",
+    "image": "projects/Qshing 탐지 어플리케이션 제작.png",
     "attachments": [
-      { "name": "발표 자료", "path": "projects/머신러닝을 활용한 QR Code 피싱 탐지 어플 제작/QR Code 속 숨겨진 피싱피싱 사이트 탐지 어플리케이션, 안심 QR.pdf" },
-      { "name": "논문", "path": "papers/2024_한국융합보안학회_추계학술대회.pdf" },
-      { "name": "수상 01", "path": "awards/[수상] 2024 한국융합보안 추계학술대회(장려상).pdf" },
-      { "name": "수상 02", "path": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2024_우수).pdf" }
+      {
+        "name": "발표 자료",
+        "path": "projects/머신러닝을 활용한 QR Code 피싱 탐지 어플 제작/QR Code 속 숨겨진 피싱피싱 사이트 탐지 어플리케이션, 안심 QR.pdf"
+      },
+      {
+        "name": "논문",
+        "path": "papers/2024_한국융합보안학회_추계학술대회.pdf"
+      },
+      {
+        "name": "수상 01",
+        "path": "awards/[수상] 2024 한국융합보안 추계학술대회(장려상).pdf"
+      },
+      {
+        "name": "수상 02",
+        "path": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2024_우수).pdf"
+      }
     ],
     "links": [
       {
@@ -153,7 +213,10 @@
     "summary": "불합격",
     "image": "projects/2024 정보보호 정책제안 공모전.png",
     "attachments": [
-      { "name": "1차 심사 서류", "path": "projects/2024 정보보호 정책제안 공모전/정책제안서(비상구).pdf" }
+      {
+        "name": "1차 심사 서류",
+        "path": "projects/2024 정보보호 정책제안 공모전/정책제안서(비상구).pdf"
+      }
     ],
     "links": [
       {
@@ -171,11 +234,26 @@
     "summary": "특허 신청",
     "image": "projects/딥페이크 음성 탐지 어플 제작.png",
     "attachments": [
-      { "name": "발표 자료", "path": "projects/딥보이스 음성 분석 연구 및 탐지 어플 제작/졸업작품_중간발표.pdf" },
-      { "name": "논문", "path": "papers/2025_한국융합보안학회_하계학술대회.pdf" },
-      { "name": "특허", "path": "awards/[NPDE-0127515] 딥보이스 탐지 장치 및 방법.pdf" },
-      { "name": "수상 01", "path": "awards/[수상] 2025 한국융합보안 하계학술대회(우수논문상).pdf" },
-      { "name": "수상 02", "path": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2025_우수).pdf" }
+      {
+        "name": "발표 자료",
+        "path": "projects/딥보이스 음성 분석 연구 및 탐지 어플 제작/졸업작품_중간발표.pdf"
+      },
+      {
+        "name": "논문",
+        "path": "papers/2025_한국융합보안학회_하계학술대회.pdf"
+      },
+      {
+        "name": "특허",
+        "path": "awards/[NPDE-0127515] 딥보이스 탐지 장치 및 방법.pdf"
+      },
+      {
+        "name": "수상 01",
+        "path": "awards/[수상] 2025 한국융합보안 하계학술대회(우수논문상).pdf"
+      },
+      {
+        "name": "수상 02",
+        "path": "awards/[수상] 중부대학교_캡스톤디자인 경진대회(2025_우수).pdf"
+      }
     ],
     "links": [
       {
@@ -193,7 +271,10 @@
     "summary": "LLM 공부",
     "image": "projects/서울시립대.png",
     "attachments": [
-      { "name": "논문", "path": "projects/서울시립대학교/Attention is all you need.pdf" }
+      {
+        "name": "논문",
+        "path": "projects/서울시립대학교/Attention is all you need.pdf"
+      }
     ],
     "links": [
       {
@@ -211,13 +292,34 @@
     "summary": "보안제품개발 트랙 수료",
     "image": "projects/2025 Best of the Best.png",
     "attachments": [
-      { "name": "발표 자료 01", "path": "projects/Best of the Best/프로젝트_1차(최종).pdf" },
-      { "name": "발표 자료 02", "path": "projects/Best of the Best/프로젝트_2차(최종).pdf" },
-      { "name": "발표 자료 03", "path": "projects/Best of the Best/프로젝트_최종.pdf" },
-      { "name": "논문 01", "path": "papers/2025_한국정보보호학회_동계학술대회01.pdf" },
-      { "name": "논문 02", "path": "papers/2025_한국정보보호학회_동계학술대회02.pdf" },
-      { "name": "수상", "path": "awards/[수상] KISIA_정보보호 정책제안(우수).pdf" },
-      { "name": "수료증", "path": "awards/[교육] BoB_수료증.pdf" }
+      {
+        "name": "발표 자료 01",
+        "path": "projects/Best of the Best/프로젝트_1차(최종).pdf"
+      },
+      {
+        "name": "발표 자료 02",
+        "path": "projects/Best of the Best/프로젝트_2차(최종).pdf"
+      },
+      {
+        "name": "발표 자료 03",
+        "path": "projects/Best of the Best/프로젝트_최종.pdf"
+      },
+      {
+        "name": "논문 01",
+        "path": "papers/2025_한국정보보호학회_동계학술대회01.pdf"
+      },
+      {
+        "name": "논문 02",
+        "path": "papers/2025_한국정보보호학회_동계학술대회02.pdf"
+      },
+      {
+        "name": "수상",
+        "path": "awards/[수상] KISIA_정보보호 정책제안(우수).pdf"
+      },
+      {
+        "name": "수료증",
+        "path": "awards/[교육] BoB_수료증.pdf"
+      }
     ],
     "links": [
       {
